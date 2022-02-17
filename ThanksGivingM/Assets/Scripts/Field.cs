@@ -8,13 +8,12 @@ public class Field : MonoBehaviour
     public GameObject[,] firstField;
     public GameObject[,] secondField;
 
-    void Start()
+    private void Start()
     {
         
-
     }
     private void Update()
     {
-        
+
     }
 }

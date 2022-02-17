@@ -56,9 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Crop.cs" />
     <Compile Include="Assets\Scripts\FieldMaker.cs" />
     <Compile Include="Assets\Scripts\Field.cs" />
-    <Compile Include="Assets\Scripts\Crop.cs" />
+    <Compile Include="Assets\Scripts\FarmerController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

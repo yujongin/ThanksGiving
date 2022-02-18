@@ -27,6 +27,7 @@ public class FarmerController : MonoBehaviour
 
     private bool arrived; //농부가 작물 앞에 도착했는지 확인하는 변수
     private bool isRest;  //농부가 쉬고있는 중인지 확인하는 변수
+    private bool isFar;
 
     private float stage_level;
     // Start is called before the first frame update
@@ -47,9 +48,10 @@ public class FarmerController : MonoBehaviour
         //만약 목표 작물이 없으면 받아온다.
         if (target_Crop == null)
         {
-            GetCrop();
+            GetCrop();            
         }
-        if (!isRest)
+        TooFar();
+        if (!isRest&&!isFar)
         {
             Walk();
             if (arrived)
@@ -95,6 +97,8 @@ public class FarmerController : MonoBehaviour
             //농부의 스테미나를 작물 공격력 만큼 감소
             stamina -= crop.atk;
             Rest();
+            
+
             //다음 작물을 받아오기 위해 변수 초기화
             cropNum++;
             if (cropNum > 9)
@@ -118,11 +122,11 @@ public class FarmerController : MonoBehaviour
 
     private void Rest()
     {
-        if (stamina <= 0)
+        if (stamina<=0)
         {
             isRest = true;
-            StartCoroutine("Recovery");          
-        }
+            StartCoroutine("Recovery");
+        }  
     }
 
     IEnumerator Recovery()
@@ -130,6 +134,23 @@ public class FarmerController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         stamina = full_stamina;
         isRest = false;
+    }
+
+    private void TooFar()
+    {
+        float addX = 8f;
+        if (transform.position.y == 0)
+        {
+            addX -= 2f;
+        }
+        if(target_Crop.transform.position.x > GameManager.Instance.camera1.transform.position.x + addX)
+        {
+            isFar = true;
+        }
+        else
+        {
+            isFar = false;
+        }
     }
 
     //목표 작물 받아오기 메서드

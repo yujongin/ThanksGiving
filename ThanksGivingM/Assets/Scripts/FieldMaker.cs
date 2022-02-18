@@ -48,7 +48,6 @@ public class FieldMaker : MonoBehaviour
     {
         if (cropNums>=5&&!checkField)
         {
-            Debug.Log("Yes!");
             //밭 생성
             if (GameManager.Instance.harvestLine == 1)
             {
@@ -92,7 +91,6 @@ public class FieldMaker : MonoBehaviour
             if (currentCrops[i].harvested)
             {
                 cropNums++;
-                Debug.Log("cropNums: " + cropNums);
             }
         }
 
@@ -111,11 +109,11 @@ public class FieldMaker : MonoBehaviour
                 GameManager.Instance.harvestLine++;
             }
             checkField = false;
-            Debug.Log(GameManager.Instance.harvestLine);
         }
 
     }
 
+    //스테이지 레벨을 올리기 위해
     void Check_Harvested()
     {
         int checkNum = 0;
@@ -143,8 +141,27 @@ public class FieldMaker : MonoBehaviour
         {
             checkField = false;
             GameManager.Instance.stage_Level += 0.5f;
+            //Destroyfield();
         }
     }
+
+/*    void Destroyfield()
+    {
+        for(int i = 0; i<WIDTH; i++)
+        {
+            for (int j = 0; j < HEIGHT; j++)
+            {
+                if (GameManager.Instance.stage_Level % 1 == 0)
+                {
+                    Destroy(field.secondField[i, j]);
+                }
+                else
+                {
+                    Destroy(field.firstField[i, j]);
+                }
+            }
+        }
+    }*/
 
     //작물 라인 초기화 메서드
     void InitLine()

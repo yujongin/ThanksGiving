@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject camera1;
     public Vector3 targetPos;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;

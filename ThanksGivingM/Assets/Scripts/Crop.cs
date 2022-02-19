@@ -32,7 +32,7 @@ public class Crop : MonoBehaviour
             harvested = true;
             FM.Check_Line();
         }
-        if (transform.position.x < GameManager.Instance.camera1.transform.position.x - 60)
+        if (transform.position.x < GameManager.Instance.camera1.transform.position.x - 60) //60ÀÇ ÀÇ¹Ì?
         {
             Destroy(gameObject);
         }

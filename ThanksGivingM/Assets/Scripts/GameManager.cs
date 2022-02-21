@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     
     public FieldMaker FM;
 
-    public int harvestLine;
-
     public GameObject camera1;
     public Vector3 targetPos;
 
@@ -35,7 +33,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         stage_Level = 1.0f;
-        harvestLine = 0;
         FM = GameObject.Find("FieldMaker").GetComponent<FieldMaker>();
     }
 

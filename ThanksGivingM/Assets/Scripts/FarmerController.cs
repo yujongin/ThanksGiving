@@ -18,7 +18,6 @@ public class FarmerController : MonoBehaviour
     private GameObject target_Crop; // 현재 목표 작물
     private Crop crop;
 
-    public bool lineCheck;
 
     public int x;  //수확해야 하는 작물 배열 x 
     private int y;  //농부의 y위치;
@@ -39,7 +38,7 @@ public class FarmerController : MonoBehaviour
         y = (int)transform.position.y;
         cropNum = 0;
         arrived = false;
-        lineCheck = false;
+
     }
 
     // Update is called once per frame
@@ -60,6 +59,23 @@ public class FarmerController : MonoBehaviour
             }
         }
 
+    }
+
+    //목표 작물 받아오기 메서드
+    private void GetCrop()
+    {
+        //1로 나누어 지면 첫 번째 밭에서 받아오기
+        if (stage_level % 1 == 0)
+        {
+            target_Crop = field.firstField[x, y];
+            crop = target_Crop.GetComponent<Crop>();
+        }
+        //0.5가 남으면 두 번째 밭에서 받아오기
+        else
+        {
+            target_Crop = field.secondField[x, y];
+            crop = target_Crop.GetComponent<Crop>();
+        }
     }
 
     //수확 할 작물 앞으로 걸어가기 메서드
@@ -153,20 +169,5 @@ public class FarmerController : MonoBehaviour
         }
     }
 
-    //목표 작물 받아오기 메서드
-    private void GetCrop()
-    {
-        //1로 나누어 지면 첫 번째 밭에서 받아오기
-        if (stage_level % 1==0)
-        {
-            target_Crop = field.firstField[x, y];
-            crop = target_Crop.GetComponent<Crop>();
-        }
-        //0.5가 남으면 두 번째 밭에서 받아오기
-        else
-        {
-            target_Crop = field.secondField[x, y];
-            crop = target_Crop.GetComponent<Crop>();
-        }
-    }
+
 }

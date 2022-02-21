@@ -14,7 +14,7 @@ public class FieldMaker : MonoBehaviour
     private GameObject[] fieldLine;
 
     //농부 배열
-    private Crop[] currentCrops;
+    private List<GameObject> currentCrops;
 
     //작물 확률
     const int grain = 60;
@@ -30,92 +30,50 @@ public class FieldMaker : MonoBehaviour
     bool checkField;
 
     public bool isCamera;
+
+    public int harvestLine;
+
     void Start()
     {
         field.firstField = new GameObject[WIDTH, HEIGHT];
         field.secondField = new GameObject[WIDTH, HEIGHT];
-        currentCrops = new Crop[5];
+        currentCrops = new List<GameObject>();
         fieldLine = new GameObject[HEIGHT];
         cropPosX = 0;
-        cropNums = 0;
+        harvestLine = 0;
         //시작위치 0부터 첫번째 밭 배열에 밭을 생성
         SetCrops(field.firstField);
-        checkField = false;
+        checkField = true;
         isCamera = false;
     }
 
     void Update()
     {
-        if (cropNums>=5&&!checkField)
+        Check_Harvested();
+        if (!checkField)
         {
-            //밭 생성
-            if (GameManager.Instance.harvestLine == 1)
+            if (harvestLine == 1)
             {
                 if (GameManager.Instance.stage_Level % 1 == 0)
                 {
                     SetCrops(field.secondField);
-                    cropNums = 0;
                 }
                 else
                 {
                     SetCrops(field.firstField);
-                    cropNums = 0;
                 }
             }
             isCamera = true;
             checkField = true;
             //카메라 이동시켜라
         }
-        else
-        {
-            Check_Harvested();
-        }
     }
 
-    //현재 수확중인 라인이 모두 수확 되었는지 확인
-    public void Check_Line()
-    {
-        for (int i = 0; i < HEIGHT; i++)
-        {
-            if (GameManager.Instance.stage_Level % 1 == 0)
-            {
-                currentCrops[i] = field.firstField[GameManager.Instance.harvestLine, i].GetComponent<Crop>();
-            }
-            else
-            {
-                currentCrops[i] = field.secondField[GameManager.Instance.harvestLine, i].GetComponent<Crop>();
-            }          
-        }
-        for (int i = 0; i < currentCrops.Length; i++)
-        {
-            if (currentCrops[i].harvested)
-            {
-                cropNums++;
-            }
-        }
-
-        if(cropNums != 5)
-        {
-            cropNums = 0;
-        }
-        else
-        {
-            if (GameManager.Instance.harvestLine >= 9)
-            {
-                GameManager.Instance.harvestLine = 0;
-            }
-            else
-            {
-                GameManager.Instance.harvestLine++;
-            }
-            checkField = false;
-        }
-
-    }
 
     //스테이지 레벨을 올리기 위해
     void Check_Harvested()
     {
+        currentCrops.Clear();
         int checkNum = 0;
         Crop crop;
         for(int i =0; i<WIDTH; i++)
@@ -125,43 +83,46 @@ public class FieldMaker : MonoBehaviour
                 if (GameManager.Instance.stage_Level % 1 == 0)
                 {
                     crop = field.firstField[i, j].GetComponent<Crop>();
+                    if (i == harvestLine && crop.harvested)
+                    {
+                        currentCrops.Add(crop.gameObject);
+                    }
                 }
                 else
                 {
                     crop = field.secondField[i, j].GetComponent<Crop>();
+                    if (i == harvestLine && crop.harvested)
+                    {
+                        currentCrops.Add(crop.gameObject);
+                    }
                 }
                 
                 if (crop.harvested)
                 {
                     checkNum++;
                 }
+
             }
+        }
+        if (currentCrops.Count == 5)
+        {
+            checkField = false;
+            if (harvestLine < 9)
+            {
+                harvestLine++;
+            }
+            else
+            {
+                harvestLine = 0;
+            }
+
         }
         if (checkNum == HEIGHT * WIDTH)
         {
-            checkField = false;
             GameManager.Instance.stage_Level += 0.5f;
-            //Destroyfield();
         }
     }
 
-/*    void Destroyfield()
-    {
-        for(int i = 0; i<WIDTH; i++)
-        {
-            for (int j = 0; j < HEIGHT; j++)
-            {
-                if (GameManager.Instance.stage_Level % 1 == 0)
-                {
-                    Destroy(field.secondField[i, j]);
-                }
-                else
-                {
-                    Destroy(field.firstField[i, j]);
-                }
-            }
-        }
-    }*/
 
     //작물 라인 초기화 메서드
     void InitLine()

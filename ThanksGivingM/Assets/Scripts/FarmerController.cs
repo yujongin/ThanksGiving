@@ -101,6 +101,7 @@ public class FarmerController : MonoBehaviour
         {
             //도착했다고 알림
             arrived = true;
+            delta = 1;
         }
     }
 
@@ -113,7 +114,6 @@ public class FarmerController : MonoBehaviour
         if (delta * harvest_Speed > 1) 
         {
             //작물의 체력을 깎는다.
-
             animator.SetTrigger("Harvest");
             crop.hp -= atk;
             delta = 0;

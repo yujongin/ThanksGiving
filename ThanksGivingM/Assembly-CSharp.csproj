@@ -58,11 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Crop.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\BGMaker.cs" />
     <Compile Include="Assets\Scripts\FarmerController.cs" />
+    <Compile Include="Assets\Scripts\Cloud.cs" />
     <Compile Include="Assets\Scripts\FieldMaker.cs" />
     <Compile Include="Assets\Scripts\Field.cs" />
-    <Compile Include="Assets\Scripts\BGMaker.cs" />
-    <Compile Include="Assets\Scripts\Cloud.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

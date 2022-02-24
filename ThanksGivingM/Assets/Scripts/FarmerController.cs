@@ -14,15 +14,17 @@ public class FarmerController : MonoBehaviour
     public float atk;               //농부 공격력
 
     private Field field;            //밭 정보
-    private FieldMaker FM;
     private GameObject target_Crop; // 현재 목표 작물
     private Crop crop;
 
+    private Animator animator;
 
     public int x;  //수확해야 하는 작물 배열 x 
     private int y;  //농부의 y위치;
 
     public int cropNum;
+
+    public float restTime;
 
     private bool arrived; //농부가 작물 앞에 도착했는지 확인하는 변수
     private bool isRest;  //농부가 쉬고있는 중인지 확인하는 변수
@@ -33,11 +35,12 @@ public class FarmerController : MonoBehaviour
     void Start()
     {
         field = GameObject.Find("Field").GetComponent<Field>();
-        FM = GameObject.Find("FieldMaker").GetComponent<FieldMaker>();
+        animator = gameObject.GetComponent<Animator>();
         x = 0;
         y = (int)transform.position.y;
         cropNum = 0;
         arrived = false;
+        complete = true;
 
     }
 
@@ -50,13 +53,19 @@ public class FarmerController : MonoBehaviour
             GetCrop();            
         }
         TooFar();
-        if (!isRest&&!isFar)
+        if (!isRest&&!isFar&&complete)
         {
+            animator.SetBool("Rest", false);
+            animator.SetBool("Walk", true);
+
             Walk();
-            if (arrived)
-            {
-                Harvest();
-            }
+        }
+        if (arrived)
+        {
+            complete = false;
+            animator.SetBool("Walk", false);
+            animator.SetBool("Rest", false);
+            Harvest();
         }
 
     }
@@ -82,10 +91,10 @@ public class FarmerController : MonoBehaviour
     private void Walk()
     {     
         //농부가 작물 앞에 도착하지 않았으면
-        if (transform.position != target_Crop.transform.position - new Vector3(1f, 0, 0))
+        if (transform.position != target_Crop.transform.position - new Vector3(1f, 0, 0.5f))
         {
             //작물 앞까지 이동한다.
-            transform.position = Vector3.MoveTowards(transform.position, target_Crop.transform.position - new Vector3(1f, 0, 0), 0.05f);
+            transform.position = Vector3.MoveTowards(transform.position, target_Crop.transform.position - new Vector3(1f, 0, 0.5f), 0.05f);        
         }
         //도착했으면
         else
@@ -104,6 +113,8 @@ public class FarmerController : MonoBehaviour
         if (delta * harvest_Speed > 1) 
         {
             //작물의 체력을 깎는다.
+
+            animator.SetTrigger("Harvest");
             crop.hp -= atk;
             delta = 0;
         }
@@ -133,13 +144,21 @@ public class FarmerController : MonoBehaviour
                 x++;
             }
             target_Crop = null;
+            StartCoroutine("Wait");
         }
     }
+    private bool complete;
 
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(0.5f);
+        complete = true;
+    }
     private void Rest()
     {
         if (stamina<=0)
         {
+            animator.SetBool("Rest", true);
             isRest = true;
             StartCoroutine("Recovery");
         }  
@@ -147,7 +166,7 @@ public class FarmerController : MonoBehaviour
 
     IEnumerator Recovery()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(restTime);
         stamina = full_stamina;
         isRest = false;
     }

@@ -31,6 +31,12 @@ public class FarmerController : MonoBehaviour
     private bool isFar;
 
     private float stage_level;
+
+
+    private float frontRest;
+    private float span;
+
+    private float decrease;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +47,8 @@ public class FarmerController : MonoBehaviour
         cropNum = 0;
         arrived = false;
         complete = true;
-
+        span = 0;
+        frontRest = 1;
     }
 
     // Update is called once per frame
@@ -55,6 +62,7 @@ public class FarmerController : MonoBehaviour
         TooFar();
         if (!isRest&&!isFar&&complete)
         {
+            animator.SetBool("FrontRest", false);
             animator.SetBool("Rest", false);
             animator.SetBool("Walk", true);
 
@@ -63,9 +71,38 @@ public class FarmerController : MonoBehaviour
         if (arrived)
         {
             complete = false;
+            animator.SetBool("FrontRest", false);
             animator.SetBool("Walk", false);
             animator.SetBool("Rest", false);
             Harvest();
+            span += Time.deltaTime;
+            if (span > 1f)
+            {
+                span = 0;
+                if(target_Crop)
+                    stamina -= target_Crop.GetComponent<Crop>().har;
+            }
+
+        }
+
+        if (isFar)
+        {
+            animator.SetBool("Walk", false);
+            animator.SetBool("Rest", false);
+            animator.SetBool("FrontRest", true);
+            span = span += Time.deltaTime;
+            if (span > frontRest)
+            {
+                if (stamina < full_stamina)
+                {
+                    stamina += full_stamina * 0.1f;
+                }
+                if (stamina > full_stamina)
+                {
+                    stamina = full_stamina;
+                }
+                span = 0;
+            }
         }
 
     }
@@ -121,11 +158,8 @@ public class FarmerController : MonoBehaviour
         //작물의 체력이 0보다 같거나 작으면
         if (crop.hp <= 0)
         {    
-            //농부의 스테미나를 작물 공격력 만큼 감소
-            stamina -= crop.atk;
             Rest();
             
-
             //다음 작물을 받아오기 위해 변수 초기화
             cropNum++;
             if (cropNum > 9)

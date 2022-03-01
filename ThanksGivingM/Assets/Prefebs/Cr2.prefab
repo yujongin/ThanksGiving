@@ -99,5 +99,6 @@ MonoBehaviour:
   cropLevel: 1
   deadCrop: {fileID: 21300000, guid: 97a55a953a2f1c3468fb7c328372b1e5, type: 3}
   atk: 40
-  hp: 140
-  har: 50
+  hp: 14
+  har: 5
+  harvested: 0

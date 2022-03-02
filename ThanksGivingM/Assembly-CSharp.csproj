@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Cloud.cs" />
     <Compile Include="Assets\Scripts\FieldMaker.cs" />
     <Compile Include="Assets\Scripts\Field.cs" />
+    <Compile Include="Assets\Scripts\CanvasFadeOut.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

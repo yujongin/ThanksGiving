@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FarmerController : MonoBehaviour
 {
@@ -36,7 +37,8 @@ public class FarmerController : MonoBehaviour
     private float frontRest;
     private float span;
 
-    private float decrease;
+    public GameObject harvestCanvas;
+    public Text harvestText;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,7 @@ public class FarmerController : MonoBehaviour
         complete = true;
         span = 0;
         frontRest = 1;
+        
     }
 
     // Update is called once per frame
@@ -157,7 +160,11 @@ public class FarmerController : MonoBehaviour
         }
         //작물의 체력이 0보다 같거나 작으면
         if (crop.hp <= 0)
-        {    
+        {            
+            GameObject go = Instantiate(harvestCanvas);
+            harvestText = go.GetComponentInChildren<Text>();
+            harvestText.text = crop.har.ToString();
+            go.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
             Rest();
             
             //다음 작물을 받아오기 위해 변수 초기화

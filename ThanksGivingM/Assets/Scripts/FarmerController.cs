@@ -163,7 +163,7 @@ public class FarmerController : MonoBehaviour
         {            
             GameObject go = Instantiate(harvestCanvas);
             harvestText = go.GetComponentInChildren<Text>();
-            harvestText.text = crop.har.ToString();
+            harvestText.text = "+"+crop.har.ToString();
             go.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
             Rest();
             

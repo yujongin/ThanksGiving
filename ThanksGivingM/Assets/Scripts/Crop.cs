@@ -12,14 +12,14 @@ public class Crop : MonoBehaviour
     public int har;         //수확량
 
 
-    private SpriteRenderer SR;
-    private FieldMaker FM;
+    private Animator animator;
+
     public bool harvested;
 
     void Start()
     {
-        SR = GetComponent<SpriteRenderer>();
-        FM = GameObject.Find("FieldMaker").GetComponent<FieldMaker>();
+        animator = GetComponent<Animator>();
+
         harvested = false;
     }
 
@@ -28,8 +28,9 @@ public class Crop : MonoBehaviour
     {
         if (hp <= 0 && !harvested) 
         {
-            SR.sprite = deadCrop;
+            animator.SetTrigger("Dead");
             harvested = true;
+            Debug.Log("상윤이는 바보야!");
         }
         if (transform.position.x < GameManager.Instance.camera1.transform.position.x - 60)
         {

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5985015988594260190}
   - component: {fileID: 2410673755839436970}
   - component: {fileID: 4994899256369765535}
+  - component: {fileID: 8205712954751014101}
   m_Layer: 0
   m_Name: Cr1
   m_TagString: Untagged
@@ -102,3 +103,22 @@ MonoBehaviour:
   hp: 9
   har: 3
   harvested: 0
+--- !u!95 &8205712954751014101
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261026297606589100}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de271766e05cdf24b955270be19309aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

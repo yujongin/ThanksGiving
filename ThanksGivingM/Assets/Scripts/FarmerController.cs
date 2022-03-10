@@ -19,6 +19,7 @@ public class FarmerController : MonoBehaviour
     private Crop crop;
 
     private Animator animator;
+    private Animator cropAnimator;
 
     public int x;  //수확해야 하는 작물 배열 x 
     private int y;  //농부의 y위치;
@@ -44,6 +45,7 @@ public class FarmerController : MonoBehaviour
     {
         field = GameObject.Find("Field").GetComponent<Field>();
         animator = gameObject.GetComponent<Animator>();
+
         x = 0;
         y = (int)transform.position.y;
         cropNum = 0;
@@ -60,7 +62,8 @@ public class FarmerController : MonoBehaviour
         //만약 목표 작물이 없으면 받아온다.
         if (target_Crop == null)
         {
-            GetCrop();            
+            GetCrop();
+            cropAnimator = target_Crop.GetComponent<Animator>();
         }
         TooFar();
         if (!isRest&&!isFar&&complete)
@@ -155,6 +158,7 @@ public class FarmerController : MonoBehaviour
         {
             //작물의 체력을 깎는다.
             animator.SetTrigger("Harvest");
+            cropAnimator.SetTrigger("Harvesting");
             crop.hp -= atk;
             delta = 0;
         }

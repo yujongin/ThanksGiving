@@ -30,7 +30,6 @@ public class Crop : MonoBehaviour
         {
             animator.SetTrigger("Dead");
             harvested = true;
-            Debug.Log("상윤이는 바보야!");
         }
         if (transform.position.x < GameManager.Instance.camera1.transform.position.x - 60)
         {

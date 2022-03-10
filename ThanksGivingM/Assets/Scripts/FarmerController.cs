@@ -74,7 +74,7 @@ public class FarmerController : MonoBehaviour
 
             Walk();
         }
-        if (arrived)
+        if (arrived&&!isRest)
         {
             complete = false;
             animator.SetBool("FrontRest", false);
@@ -90,7 +90,23 @@ public class FarmerController : MonoBehaviour
             }
 
         }
-
+        if (isRest)
+        {
+            animator.SetBool("FrontRest", false);
+            animator.SetBool("Walk", false);
+            animator.SetBool("Rest", true);
+            RT += Time.deltaTime;
+            if (RT > 1)
+            {
+                RT = 0;
+                stamina += full_stamina * 0.1f;
+            }
+            if (stamina >= full_stamina)
+            {
+                stamina = full_stamina;
+                isRest = false;
+            }
+        }
         if (isFar)
         {
             animator.SetBool("Walk", false);
@@ -149,6 +165,7 @@ public class FarmerController : MonoBehaviour
     }
 
     private float delta = 0;
+    private float RT = 0;
     //작물 수확
     private void Harvest()
     {
@@ -162,6 +179,7 @@ public class FarmerController : MonoBehaviour
             crop.hp -= atk;
             delta = 0;
         }
+        Rest();
         //작물의 체력이 0보다 같거나 작으면
         if (crop.hp <= 0)
         {            
@@ -169,8 +187,8 @@ public class FarmerController : MonoBehaviour
             harvestText = go.GetComponentInChildren<Text>();
             harvestText.text = "+"+crop.har.ToString();
             go.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
-            Rest();
-            
+
+
             //다음 작물을 받아오기 위해 변수 초기화
             cropNum++;
             if (cropNum > 9)
@@ -203,18 +221,11 @@ public class FarmerController : MonoBehaviour
     {
         if (stamina<=0)
         {
-            animator.SetBool("Rest", true);
+
             isRest = true;
-            StartCoroutine("Recovery");
         }  
     }
 
-    IEnumerator Recovery()
-    {
-        yield return new WaitForSeconds(restTime);
-        stamina = full_stamina;
-        isRest = false;
-    }
 
     private void TooFar()
     {

@@ -10,7 +10,8 @@ public class CanvasFadeOut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cg = GetComponent<CanvasGroup>();   
+        cg = GetComponent<CanvasGroup>();
+        Destroy(gameObject, 2f);
     }
 
     // Update is called once per frame
@@ -21,10 +22,8 @@ public class CanvasFadeOut : MonoBehaviour
             delta += 0.01f*Time.deltaTime;
             cg.alpha -= delta;          
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        
+        
         transform.Translate(0, 0.5f * Time.deltaTime, 0);
     }
 }

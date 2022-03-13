@@ -31,4 +31,5 @@ public class BGMaker : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }

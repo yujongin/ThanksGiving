@@ -57,6 +57,7 @@ public class FarmerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //만약 목표 작물이 없으면 받아온다.
         if (target_Crop == null)
         {

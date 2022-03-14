@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject camera1;
     public Vector3 targetPos;
+
+    public Text current_harvest;
+    public float total_yield;
 
     private void Awake()
     {
@@ -51,6 +54,8 @@ public class GameManager : MonoBehaviour
         {
             targetPos = camera1.transform.position + new Vector3(2f, 0, 0);
         }
+
+        current_harvest.text = total_yield.ToString();
     }
 
 }

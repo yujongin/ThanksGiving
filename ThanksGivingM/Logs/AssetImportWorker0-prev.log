@@ -15,11 +15,11 @@ C:/Users/user/Documents/GitHub/ThanksGiving/ThanksGivingM
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64054
+51216
 Successfully changed project path to: C:/Users/user/Documents/GitHub/ThanksGiving/ThanksGivingM
 C:/Users/user/Documents/GitHub/ThanksGiving/ThanksGivingM
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 94.86 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 70.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.28f1 (f5400f52e03f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005458 seconds.
+Registered in 0.005127 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 86.99 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 52.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.192 seconds
+- Completed reload, in  0.865 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1193ms)
-		BeginReloadAssembly (152ms)
+	ReloadAssembly (865ms)
+		BeginReloadAssembly (110ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (907ms)
-			LoadAssemblies (147ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (648ms)
+			LoadAssemblies (107ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (321ms)
+			SetupTypeCache (226ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (47ms)
-			SetupLoadedEditorAssemblies (342ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (228ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (87ms)
-				BeforeProcessingInitializeOnLoad (36ms)
-				ProcessInitializeOnLoadAttributes (160ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				RefreshPlugins (53ms)
+				BeforeProcessingInitializeOnLoad (23ms)
+				ProcessInitializeOnLoadAttributes (109ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013802 seconds.
+Registered in 0.008768 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 118.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 47.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.311 seconds
+- Completed reload, in  1.257 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3313ms)
-		BeginReloadAssembly (377ms)
+	ReloadAssembly (1258ms)
+		BeginReloadAssembly (183ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (2759ms)
-			LoadAssemblies (333ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1005ms)
+			LoadAssemblies (131ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (966ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (129ms)
-			SetupLoadedEditorAssemblies (1004ms)
+			SetupTypeCache (325ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (389ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (118ms)
-				BeforeProcessingInitializeOnLoad (224ms)
-				ProcessInitializeOnLoadAttributes (577ms)
-				ProcessInitializeOnLoadMethodAttributes (54ms)
-				AfterProcessingInitializeOnLoad (22ms)
+				RefreshPlugins (48ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (210ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (12ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
-Refreshing native plugins compatible for Editor in 1.05 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2205 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.2 MB.
-System memory in use after: 96.3 MB.
+System memory in use before: 96.1 MB.
+System memory in use after: 96.2 MB.
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2639.
-Total: 4.303500 ms (FindLiveObjects: 0.196900 ms CreateObjectMapping: 0.125800 ms MarkObjects: 3.881700 ms  DeleteObjects: 0.097300 ms)
+Total: 2.825600 ms (FindLiveObjects: 0.166400 ms CreateObjectMapping: 0.075700 ms MarkObjects: 2.524200 ms  DeleteObjects: 0.058600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,57 +131,177 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/FarmerController.cs
-  artifactKey: Guid(888fbfc64b22edf49a66b99e89020909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/FarmerController.cs using Guid(888fbfc64b22edf49a66b99e89020909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f9395f7dd3574c5162ae0e4a74aa968') in 0.126098 seconds 
-  Import took 0.131054 seconds .
+  path: Assets/Resources/Farmer Ayla
+  artifactKey: Guid(decd0dfb66aa55b42bd37284ab2a44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla using Guid(decd0dfb66aa55b42bd37284ab2a44c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f25d38a3b978f6f5332f0cdd1bb034b8') in 0.011880 seconds 
+  Import took 0.016428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.003644 seconds.
+  path: Assets/Resources/Farmer Libre
+  artifactKey: Guid(4d925a5465e5ad140bf4a417b9f291a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre using Guid(4d925a5465e5ad140bf4a417b9f291a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3abddab34fedbc1e2e19618ee31f8ab') in 0.011838 seconds 
+  Import took 0.017548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.335888 seconds.
+  path: Assets/Resources/Farmer Libre/harvest
+  artifactKey: Guid(8223fc262d8b1c14fa860071fcb56ac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest using Guid(8223fc262d8b1c14fa860071fcb56ac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23127aef61b7365c172eed89e5e7b6e') in 0.012870 seconds 
+  Import took 0.016869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.115224 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest1.png
+  artifactKey: Guid(73ed4433c51de234e8d6ee7c885e5403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest1.png using Guid(73ed4433c51de234e8d6ee7c885e5403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15b13f8b8baf43ffab8e158f51feee78') in 0.112442 seconds 
+  Import took 0.116339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest3.png
+  artifactKey: Guid(19c97ae8d78fc9e4586bace71fbaacde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest3.png using Guid(19c97ae8d78fc9e4586bace71fbaacde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c788b467cbd021233afbc02e629689eb') in 0.029555 seconds 
+  Import took 0.032949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest2.png
+  artifactKey: Guid(ffbe9f47fd3c5c449bd30ae583308bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest2.png using Guid(ffbe9f47fd3c5c449bd30ae583308bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e8502696d2c3c233ecc00b5a198a040') in 0.023222 seconds 
+  Import took 0.029024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest4.png
+  artifactKey: Guid(5948c95bcf945c849b74a06065f785a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest4.png using Guid(5948c95bcf945c849b74a06065f785a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c0a3a96119cece50fabd4765124084') in 0.024498 seconds 
+  Import took 0.031799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.733729 seconds.
+  path: Assets/Resources/Farmer Libre/walk
+  artifactKey: Guid(7fabc0fcdefc22c449f1b8d14d9756ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk using Guid(7fabc0fcdefc22c449f1b8d14d9756ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '519d849a42859f72f0b4fc044d067f9e') in 0.016165 seconds 
+  Import took 0.021417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022772 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk1.png
+  artifactKey: Guid(8eeb317808098cc4da5d9e61f97f1e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk1.png using Guid(8eeb317808098cc4da5d9e61f97f1e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158c68b054aa90a5d4a89ed840bfefcb') in 0.020621 seconds 
+  Import took 0.024877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk6.png
+  artifactKey: Guid(2bb6115b952fcc046913fe061e797226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk6.png using Guid(2bb6115b952fcc046913fe061e797226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f7d449d671a60be02bf155d401eeb5') in 0.023039 seconds 
+  Import took 0.026988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk2.png
+  artifactKey: Guid(2259bb663d616f34f81eb2af550f9753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk2.png using Guid(2259bb663d616f34f81eb2af550f9753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74059d4f1bb582789267e291b2c6359') in 0.025043 seconds 
+  Import took 0.029819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk3.png
+  artifactKey: Guid(6e6ec4b7fec8c7b4b9a54757783941da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk3.png using Guid(6e6ec4b7fec8c7b4b9a54757783941da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7400ce29898a4dc3f75e8075fca7f216') in 0.025253 seconds 
+  Import took 0.029401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk5.png
+  artifactKey: Guid(9e2bdf0d21a88d9498f8f1a7bc584b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk5.png using Guid(9e2bdf0d21a88d9498f8f1a7bc584b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be19d9034877a92c29c567b14d66719') in 0.024192 seconds 
+  Import took 0.030627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk4.png
+  artifactKey: Guid(2b026dcbec3493c44aeadebe6bc8144d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk4.png using Guid(2b026dcbec3493c44aeadebe6bc8144d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58143eed534a2ef442ae50d7125bc9a1') in 0.019587 seconds 
+  Import took 0.023387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.568387 seconds.
+  path: Assets/Resources/Farmer Libre/KakaoTalk_20220313_223326522.png
+  artifactKey: Guid(31872f453fc1e6d40a53ce1c94144885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/KakaoTalk_20220313_223326522.png using Guid(31872f453fc1e6d40a53ce1c94144885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '120b50bfcac913ff37e9ddd815c4df8d') in 0.025576 seconds 
+  Import took 0.029459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.175816 seconds.
+  path: Assets/Resources/Farmer Libre/Libre.png
+  artifactKey: Guid(31872f453fc1e6d40a53ce1c94144885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Libre.png using Guid(31872f453fc1e6d40a53ce1c94144885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9877905d24d4d7b50803bee3364b617d') in 0.019666 seconds 
+  Import took 0.027111 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007120 seconds.
+Registered in 0.007118 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.670 seconds
+- Completed reload, in  1.119 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1671ms)
-		BeginReloadAssembly (179ms)
+	ReloadAssembly (1120ms)
+		BeginReloadAssembly (144ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (1392ms)
-			LoadAssemblies (172ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (904ms)
+			LoadAssemblies (133ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (459ms)
+			SetupTypeCache (313ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (526ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (327ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (169ms)
-				ProcessInitializeOnLoadAttributes (318ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (12ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (205ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
 Platform modules already initialized, skipping
 Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2197 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.5 MB.
-System memory in use after: 95.6 MB.
+System memory in use before: 98.4 MB.
+System memory in use after: 98.5 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2641.
-Total: 4.860100 ms (FindLiveObjects: 0.331200 ms CreateObjectMapping: 0.191500 ms MarkObjects: 4.305300 ms  DeleteObjects: 0.030000 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2647.
+Total: 3.382900 ms (FindLiveObjects: 0.282300 ms CreateObjectMapping: 0.113300 ms MarkObjects: 2.966100 ms  DeleteObjects: 0.019800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -194,4 +314,602 @@ AssetImportParameters requested are different than current active one (requested
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 254.056728 seconds.
+  path: Assets/Resources/Farmer Libre/Libre1.png
+  artifactKey: Guid(dab0d34898b72b44ba7c170f2bcda226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Libre1.png using Guid(dab0d34898b72b44ba7c170f2bcda226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c646b76b8cf70b25ad7f23e51ed86256') in 0.072408 seconds 
+  Import took 0.077755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.131368 seconds.
+  path: Assets/Resources/Farmer Libre/Idle
+  artifactKey: Guid(5dd76e73d1079a44d83ac5c7957620c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Idle using Guid(5dd76e73d1079a44d83ac5c7957620c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a3e9705876ec078d446666a1642006e') in 0.011440 seconds 
+  Import took 0.015973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.273705 seconds.
+  path: Assets/Resources/Farmer Libre/Libre.controller
+  artifactKey: Guid(31d7d737f41d24a4f9c1de250a6a77ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Libre.controller using Guid(31d7d737f41d24a4f9c1de250a6a77ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64488eaf2b58dc6a42f1e6a9a988fac3') in 0.010431 seconds 
+  Import took 0.016272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.853478 seconds.
+  path: Assets/Resources/Farmer Libre/Libre.controller
+  artifactKey: Guid(31d7d737f41d24a4f9c1de250a6a77ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Libre.controller using Guid(31d7d737f41d24a4f9c1de250a6a77ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5feeedf17765395c6913385438b967') in 0.010975 seconds 
+  Import took 0.016630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 129.220271 seconds.
+  path: Assets/Resources/Farmer Libre/Libre.controller
+  artifactKey: Guid(31d7d737f41d24a4f9c1de250a6a77ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Libre.controller using Guid(31d7d737f41d24a4f9c1de250a6a77ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4244e328ec03023be3f7b4721132860') in 0.007509 seconds 
+  Import took 0.012330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.741821 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/Libre_harvest.anim
+  artifactKey: Guid(4d113eedd3c2c02498fdafa46da6dbcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/Libre_harvest.anim using Guid(4d113eedd3c2c02498fdafa46da6dbcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e14f2218752b02b79c580d4f03df5db') in 0.010659 seconds 
+  Import took 0.014734 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007692 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.341 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1342ms)
+		BeginReloadAssembly (164ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1098ms)
+			LoadAssemblies (148ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (411ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (372ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (235ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2197 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.5 MB.
+System memory in use after: 98.6 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2650.
+Total: 3.513600 ms (FindLiveObjects: 0.182500 ms CreateObjectMapping: 0.073100 ms MarkObjects: 3.228500 ms  DeleteObjects: 0.028500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008603 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.539 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1539ms)
+		BeginReloadAssembly (182ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1258ms)
+			LoadAssemblies (203ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (426ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (425ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (120ms)
+				ProcessInitializeOnLoadAttributes (271ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2197 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.5 MB.
+System memory in use after: 98.6 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2652.
+Total: 3.836100 ms (FindLiveObjects: 0.239800 ms CreateObjectMapping: 0.144800 ms MarkObjects: 3.430200 ms  DeleteObjects: 0.020100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 75.996252 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest1.png
+  artifactKey: Guid(73ed4433c51de234e8d6ee7c885e5403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest1.png using Guid(73ed4433c51de234e8d6ee7c885e5403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe043c530d88eec1a06d7a033f8b5df') in 0.070010 seconds 
+  Import took 0.074046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000504 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest3.png
+  artifactKey: Guid(19c97ae8d78fc9e4586bace71fbaacde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest3.png using Guid(19c97ae8d78fc9e4586bace71fbaacde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd921c0cd7ae4d46508e60b1d8fab5643') in 0.018212 seconds 
+  Import took 0.026377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest2.png
+  artifactKey: Guid(ffbe9f47fd3c5c449bd30ae583308bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest2.png using Guid(ffbe9f47fd3c5c449bd30ae583308bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd3ec64008173fced8e1954bdf559d4e') in 0.020639 seconds 
+  Import took 0.025782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Resources/Farmer Libre/harvest/libre_harvest4.png
+  artifactKey: Guid(5948c95bcf945c849b74a06065f785a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/harvest/libre_harvest4.png using Guid(5948c95bcf945c849b74a06065f785a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1234d9b65ea8ad3844c146949a8ffb7') in 0.021646 seconds 
+  Import took 0.026712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.710312 seconds.
+  path: Assets/Resources/Farmer Libre/Idle/Libre.png
+  artifactKey: Guid(31872f453fc1e6d40a53ce1c94144885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Idle/Libre.png using Guid(31872f453fc1e6d40a53ce1c94144885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90258e630ca9cad5b92bdb192551b684') in 0.015915 seconds 
+  Import took 0.019713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003520 seconds.
+  path: Assets/Resources/Farmer Libre/Idle/Libre1.png
+  artifactKey: Guid(dab0d34898b72b44ba7c170f2bcda226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/Idle/Libre1.png using Guid(dab0d34898b72b44ba7c170f2bcda226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ff45dc38db98d752e1a2583e45f13bd') in 0.023214 seconds 
+  Import took 0.027845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.474234 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk3.png
+  artifactKey: Guid(6e6ec4b7fec8c7b4b9a54757783941da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk3.png using Guid(6e6ec4b7fec8c7b4b9a54757783941da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e257890a7ffd040c6b6325e0d4e64ede') in 0.013301 seconds 
+  Import took 0.018364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004361 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk1.png
+  artifactKey: Guid(8eeb317808098cc4da5d9e61f97f1e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk1.png using Guid(8eeb317808098cc4da5d9e61f97f1e0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8bfda713fd5739c4bc96ff211c1392d') in 0.017327 seconds 
+  Import took 0.022880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk6.png
+  artifactKey: Guid(2bb6115b952fcc046913fe061e797226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk6.png using Guid(2bb6115b952fcc046913fe061e797226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc96468bba76dc6d9a0bfd44750e455a') in 0.019256 seconds 
+  Import took 0.023343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk2.png
+  artifactKey: Guid(2259bb663d616f34f81eb2af550f9753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk2.png using Guid(2259bb663d616f34f81eb2af550f9753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b1cc965011d815244abec7962729df5') in 0.018505 seconds 
+  Import took 0.023616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk5.png
+  artifactKey: Guid(9e2bdf0d21a88d9498f8f1a7bc584b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk5.png using Guid(9e2bdf0d21a88d9498f8f1a7bc584b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cd685625e5d6a96ddc22248954bc1e0') in 0.016470 seconds 
+  Import took 0.020458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Resources/Farmer Libre/walk/libre_walk4.png
+  artifactKey: Guid(2b026dcbec3493c44aeadebe6bc8144d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Libre/walk/libre_walk4.png using Guid(2b026dcbec3493c44aeadebe6bc8144d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20f0fdd16cb06e4d72100874b95cbf5') in 0.017266 seconds 
+  Import took 0.022468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.517905 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front1.png
+  artifactKey: Guid(9e79b72d69a966e4f8485519c0b93ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front1.png using Guid(9e79b72d69a966e4f8485519c0b93ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e084907c49deec816a98f5bbfdbeda3') in 0.015511 seconds 
+  Import took 0.019463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003336 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front2.png
+  artifactKey: Guid(5c236f69e8c97f04db268458b91dee89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front2.png using Guid(5c236f69e8c97f04db268458b91dee89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9073af6b9b94b7f3225246b30a0fd8a0') in 0.024180 seconds 
+  Import took 0.028548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front4.png
+  artifactKey: Guid(b35c8cc2fc0fb1f45a00aba47a9eb911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front4.png using Guid(b35c8cc2fc0fb1f45a00aba47a9eb911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e7c911ac0afc2290661529a88370b1') in 0.023596 seconds 
+  Import took 0.027350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front6.png
+  artifactKey: Guid(37454415b68bff940b20168533bee310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front6.png using Guid(37454415b68bff940b20168533bee310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f5481b46fef3a8e485115e2f4f1846') in 0.020017 seconds 
+  Import took 0.024050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front7.png
+  artifactKey: Guid(44c9b4386a06aa942ba9339f592a0074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front7.png using Guid(44c9b4386a06aa942ba9339f592a0074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '743cf25ef8351eb9f39ab10fface4a21') in 0.020637 seconds 
+  Import took 0.026779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000500 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front5.png
+  artifactKey: Guid(1d45af6ca258ad7468a21c1a15c63194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front5.png using Guid(1d45af6ca258ad7468a21c1a15c63194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97077d210332d959e0c1d19f90436481') in 0.023196 seconds 
+  Import took 0.027520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front3.png
+  artifactKey: Guid(30939c531d2bb6247bd59746a06576e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/front_rest/rest_front3.png using Guid(30939c531d2bb6247bd59746a06576e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07490566519e9b9cf63f9fbd718b3dfe') in 0.023183 seconds 
+  Import took 0.028597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.413800 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest1.png
+  artifactKey: Guid(73db9471605b722408c90e3e9450115e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest1.png using Guid(73db9471605b722408c90e3e9450115e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5f16fdff503be9d768bde635e4856bb') in 0.017887 seconds 
+  Import took 0.023220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest4.png
+  artifactKey: Guid(97e740357f7c4f4449b83d93af574033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest4.png using Guid(97e740357f7c4f4449b83d93af574033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99a0c70d85c33fd00e99043c11b240ea') in 0.022326 seconds 
+  Import took 0.027925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest2.png
+  artifactKey: Guid(734cab4d858d5794b8b3c9011d879b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest2.png using Guid(734cab4d858d5794b8b3c9011d879b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2df23e407ec1d48682dd17180f6dd4c2') in 0.026314 seconds 
+  Import took 0.032286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest3.png
+  artifactKey: Guid(fabe7207392c8e74e81ae216d4c06e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/harvest/farmer_harvest3.png using Guid(fabe7207392c8e74e81ae216d4c06e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd73dff7598ef087d5bbb204114189d0c') in 0.026388 seconds 
+  Import took 0.031291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.847228 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/idle/farmer.png
+  artifactKey: Guid(3d0d76bc4a471e8439a7bd45c911feca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/idle/farmer.png using Guid(3d0d76bc4a471e8439a7bd45c911feca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '967a16fa543f34ebe6ce95f201608835') in 0.017376 seconds 
+  Import took 0.023267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/idle/farmer2.png
+  artifactKey: Guid(51fea7956f77a8346a0188de7e14cb48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/idle/farmer2.png using Guid(51fea7956f77a8346a0188de7e14cb48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4535aa247f4155c37ebf764ab23c057') in 0.022838 seconds 
+  Import took 0.027965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.289177 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest1.png
+  artifactKey: Guid(8cad979b15acd3d448c456e7a1ef5842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest1.png using Guid(8cad979b15acd3d448c456e7a1ef5842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029e358ccde468ff06aadfbd4f19c1de') in 0.017422 seconds 
+  Import took 0.022100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004510 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest2.png
+  artifactKey: Guid(f9142188e6f616a4eb0c1a17c3530afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest2.png using Guid(f9142188e6f616a4eb0c1a17c3530afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594d817e4fb117399737cda7750b92ef') in 0.020848 seconds 
+  Import took 0.025163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest8.png
+  artifactKey: Guid(9484b54f57afc4348a60867cf5a0a702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest8.png using Guid(9484b54f57afc4348a60867cf5a0a702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4254834316cb2649f2ada3cfb2834a0') in 0.026326 seconds 
+  Import took 0.031536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest4.png
+  artifactKey: Guid(2282cdb5063788d4488927f1f026cbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest4.png using Guid(2282cdb5063788d4488927f1f026cbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '622f4181878920a9cfb9855d123fe70e') in 0.023360 seconds 
+  Import took 0.028183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest5.png
+  artifactKey: Guid(6f9e28389e4a8534794adfe92238213b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest5.png using Guid(6f9e28389e4a8534794adfe92238213b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e5aa4217142f36d12dddfc2557a8dff') in 0.020450 seconds 
+  Import took 0.025223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest9.png
+  artifactKey: Guid(1123ac46055867d4187ec8daaced77f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest9.png using Guid(1123ac46055867d4187ec8daaced77f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51b59471647dfa5cfcdd4e602deea93') in 0.018733 seconds 
+  Import took 0.025113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest3.png
+  artifactKey: Guid(b3d3accdc5e19874ea4a63cbcad5e489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest3.png using Guid(b3d3accdc5e19874ea4a63cbcad5e489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51f68880c1b01e49385dfcf5a29523da') in 0.018797 seconds 
+  Import took 0.022735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest6.png
+  artifactKey: Guid(d2c2ba4a8959db7428d698d6431d7c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest6.png using Guid(d2c2ba4a8959db7428d698d6431d7c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f58233c79f949e45dcca700f8e47b60') in 0.020627 seconds 
+  Import took 0.028446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest10.png
+  artifactKey: Guid(7049cdc08deadfe4885b73d22d56a36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest10.png using Guid(7049cdc08deadfe4885b73d22d56a36b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0787c0d701482eee9139f17fe90db0f9') in 0.022213 seconds 
+  Import took 0.026678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest7.png
+  artifactKey: Guid(bc994a3f1b7048a4ca9ef5368595028a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/rest/farmer_rest7.png using Guid(bc994a3f1b7048a4ca9ef5368595028a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3be1628a82e3216dd2f46c8ccf560c7a') in 0.020846 seconds 
+  Import took 0.025479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.397971 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk1.png
+  artifactKey: Guid(95a4d31605a6e1f4d9303d9dca05f735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk1.png using Guid(95a4d31605a6e1f4d9303d9dca05f735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '690313be8feb389043a64e3f2b6c2683') in 0.020519 seconds 
+  Import took 0.025046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000916 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk2.png
+  artifactKey: Guid(17663221ddbb7e34a80faf28bc712d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk2.png using Guid(17663221ddbb7e34a80faf28bc712d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cc77fbc0d33db4e0fec40383247c273') in 0.022752 seconds 
+  Import took 0.031076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk3.png
+  artifactKey: Guid(603b09f30279bc9438edaaeec11ac4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk3.png using Guid(603b09f30279bc9438edaaeec11ac4dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58936d818d2557725ab5be01a7fa4a50') in 0.024892 seconds 
+  Import took 0.031358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk4.png
+  artifactKey: Guid(a73d1821021ec6d49a5fa29861918f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk4.png using Guid(a73d1821021ec6d49a5fa29861918f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9248817ecb54be7c1a19d1cdd1bb9a3') in 0.021023 seconds 
+  Import took 0.026886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk6.png
+  artifactKey: Guid(4d5d1916bbbcd9c47bfa475473d5c91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk6.png using Guid(4d5d1916bbbcd9c47bfa475473d5c91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffe6414480e1d9a88d8be2a4aa743bae') in 0.025345 seconds 
+  Import took 0.031423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk5.png
+  artifactKey: Guid(d2e77ec28c9abcb4fbbf55598a41db0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/walk/farmer_walk5.png using Guid(d2e77ec28c9abcb4fbbf55598a41db0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0bb2b036e25a4b78b8f4536b6249a2b') in 0.022049 seconds 
+  Import took 0.027360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.696803 seconds.
+  path: Assets/Resources/Farmer Ayla/GeneralFarmer/farmer.png
+  artifactKey: Guid(8a9a08bedf837f54da43953c4f7c1c8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Farmer Ayla/GeneralFarmer/farmer.png using Guid(8a9a08bedf837f54da43953c4f7c1c8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abe0b83324f75352e6753a64b58667cb') in 0.014773 seconds 
+  Import took 0.018660 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010351 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.170 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1170ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (959ms)
+			LoadAssemblies (130ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (311ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (341ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (214ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2197 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.6 MB.
+System memory in use after: 98.8 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2655.
+Total: 4.292200 ms (FindLiveObjects: 0.150100 ms CreateObjectMapping: 0.078200 ms MarkObjects: 4.022300 ms  DeleteObjects: 0.040500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 40.366159 seconds.
+  path: Assets/Prefebs/UI
+  artifactKey: Guid(7c48460322b93554eaaf24fafee6fb41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/UI using Guid(7c48460322b93554eaaf24fafee6fb41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51b918025875aadd025f4ececcaac72c') in 0.011321 seconds 
+  Import took 0.015564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.713783 seconds.
+  path: Assets/Prefebs/Crops
+  artifactKey: Guid(3ec224da728ebd5498460507c1457ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Crops using Guid(3ec224da728ebd5498460507c1457ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06b18335ee5108ec37276539ce982e32') in 0.007437 seconds 
+  Import took 0.013515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.573974 seconds.
+  path: Assets/Prefebs/Farmers
+  artifactKey: Guid(b11106eb50aab0146a5b3e8ff735f6e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Farmers using Guid(b11106eb50aab0146a5b3e8ff735f6e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f54212ac09ae27de4519fe29f140a10e') in 0.008334 seconds 
+  Import took 0.014604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.689448 seconds.
+  path: Assets/Prefebs/Farmers/Ayla.prefab
+  artifactKey: Guid(bf109aa7352108149a0ccf88624c578d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Farmers/Ayla.prefab using Guid(bf109aa7352108149a0ccf88624c578d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ee99b5dc661d8c8edba3a164b45bfcb') in 0.106779 seconds 
+  Import took 0.110498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.446544 seconds.
+  path: Assets/Prefebs/Farmers/Libre.prefab
+  artifactKey: Guid(05a19e78535ea4c46a68ffc840b280b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefebs/Farmers/Libre.prefab using Guid(05a19e78535ea4c46a68ffc840b280b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb079d0bdb094b32e34deb7bf70d8891') in 0.026690 seconds 
+  Import took 0.032170 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

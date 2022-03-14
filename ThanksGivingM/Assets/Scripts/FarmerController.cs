@@ -69,7 +69,7 @@ public class FarmerController : MonoBehaviour
         if (!isRest&&!isFar&&complete)
         {
             animator.SetBool("FrontRest", false);
-            animator.SetBool("Rest", false);
+            animator.SetBool("Exhaust", false);
             animator.SetBool("Walk", true);
 
             Walk();
@@ -79,7 +79,7 @@ public class FarmerController : MonoBehaviour
             complete = false;
             animator.SetBool("FrontRest", false);
             animator.SetBool("Walk", false);
-            animator.SetBool("Rest", false);
+            animator.SetBool("Exhaust", false);
             Harvest();
             span += Time.deltaTime;
             if (span > 1f)
@@ -94,7 +94,7 @@ public class FarmerController : MonoBehaviour
         {
             animator.SetBool("FrontRest", false);
             animator.SetBool("Walk", false);
-            animator.SetBool("Rest", true);
+            animator.SetBool("Exhaust", true);
             RT += Time.deltaTime;
             if (RT > 1)
             {
@@ -110,7 +110,8 @@ public class FarmerController : MonoBehaviour
         if (isFar)
         {
             animator.SetBool("Walk", false);
-            animator.SetBool("Rest", false);
+            animator.SetBool("Exhaust" +
+                "", false);
             animator.SetBool("FrontRest", true);
             span = span += Time.deltaTime;
             if (span > frontRest)

@@ -21,10 +21,8 @@ public class CanvasFadeOut : MonoBehaviour
             delta += 0.01f*Time.deltaTime;
             cg.alpha -= delta;          
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject,2f);
+        
         transform.Translate(0, 0.5f * Time.deltaTime, 0);
     }
 }

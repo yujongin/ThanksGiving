@@ -30,6 +30,7 @@ public class Crop : MonoBehaviour
         {
             SR.sprite = deadCrop;
             harvested = true;
+            GameManager.Instance.total_yield += har;
         }
         if (transform.position.x < GameManager.Instance.camera1.transform.position.x - 60)
         {

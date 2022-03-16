@@ -222,8 +222,9 @@ public class FarmerController : MonoBehaviour
     {
         if (stamina<=0)
         {
-
-            isRest = true;
+            isRest = true;          
+            GameManager.Instance.tension -= 10;
+            UIManager.instance.UpdateTensionGauge();
         }  
     }
 

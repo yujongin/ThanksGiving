@@ -7,6 +7,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public float stage_Level;
 
+    public float tension; //텐션게이지
+    public float maxTension = 100; //텐션게이지 최대치
+
+    public float exp; //현재 경험치
+
 
     public Crop crop;
     
@@ -35,6 +40,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tension = maxTension;
         stage_Level = 1.0f;
         FM = GameObject.Find("FieldMaker").GetComponent<FieldMaker>();
     }
@@ -42,6 +48,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
+
         if (FM.isCamera)
         {
             if (camera1.transform.position == targetPos)

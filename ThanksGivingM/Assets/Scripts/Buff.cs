@@ -58,16 +58,23 @@ public class Buff : MonoBehaviour
 
     private void GenerateNoteTimer() //노트 생성 타이머
     {
-        noteGenerateTimer -= Time.deltaTime;
+        if (notes != maxnotes) //노트가 최대 노트수만큼 꽉 차지 않았다면 타이머를 돌린다.
+            noteGenerateTimer -= Time.deltaTime;
+
+        else                    // 꽉 찼으면 타이머 초기화.
+            noteGenerateTimer = noteGenerateSpan;
 
         if (noteGenerateTimer < 0)
         {
-            notes++;
-            UIManager.instance.UpdateNoteUI();
             noteGenerateTimer = noteGenerateSpan;
+            if(notes < maxnotes)
+            {
+                notes++;
+                UIManager.instance.UpdateNoteUI();
+            }          
         }
     }
-    private void EnhanceButtonTimer() //노트 생성 타이머
+    private void EnhanceButtonTimer() //강화버튼 쿨타임 타이머
     {
         if (isOnEnhanceCoolTime)
         {

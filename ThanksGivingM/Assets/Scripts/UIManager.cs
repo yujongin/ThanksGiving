@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     public List<GameObject> notes; //음표UI들의 배열. 차례대로 꺼줄 것.
     public Buff buff;
     public Image encoreButtonImage;
+    public Image tensionGauge;
 
     private void Update()
     {
@@ -44,8 +45,20 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void UpdateTensionGauge()
+    {
 
-
+        StartCoroutine(tension());
+        //tensionGauge.fillAmount = GameManager.Instance.tension * .01f;
+    }
+    IEnumerator tension()
+    {
+        for (float f = tensionGauge.fillAmount; f > GameManager.Instance.tension * .01f; f -= .01f)
+        {
+            tensionGauge.fillAmount -= .01f;
+            yield return new WaitForSeconds(.01f);
+        }
+    }
 
 
 }

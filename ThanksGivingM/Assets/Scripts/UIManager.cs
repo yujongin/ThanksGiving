@@ -26,6 +26,8 @@ public class UIManager : MonoBehaviour
     public Buff buff;
     public Image encoreButtonImage;
     public Image tensionGauge;
+    public Image expGauge;
+    public Text levelText;
 
     private void Update()
     {
@@ -48,10 +50,24 @@ public class UIManager : MonoBehaviour
     public void UpdateTensionGauge()
     {
 
-        StartCoroutine(tension());
+        StartCoroutine(TensionDecreaseAnimation());
         //tensionGauge.fillAmount = GameManager.Instance.tension * .01f;
     }
-    IEnumerator tension()
+    public void UpdatePlayerLevel()
+    {
+        levelText.text = ($"{GameManager.Instance.player_Level}");
+    }
+    public void UpdateExpGauge()
+    {
+        //StartCoroutine(EXPIncreaseAnimation());
+
+        float a = (GameManager.Instance.exp * 100) / GameManager.Instance.requiredexp;
+        expGauge.fillAmount = a * 0.01f;
+        //Debug.Log(a);
+    }
+
+
+    IEnumerator TensionDecreaseAnimation() //게이지가 줄어드는 것에 대한 애니메이션.
     {
         for (float f = tensionGauge.fillAmount; f > GameManager.Instance.tension * .01f; f -= .01f)
         {
@@ -60,5 +76,14 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    IEnumerator EXPIncreaseAnimation() //경험치가 늘어나는 것에 대한 애니메이션.
+    { //수정해야함! 2022.03.17 15:24
+        float a = (GameManager.Instance.exp * 100) / GameManager.Instance.requiredexp;
 
+        for (float f = expGauge.fillAmount; f < a; f += .01f)
+        {
+            tensionGauge.fillAmount += .01f;
+            yield return new WaitForSeconds(.01f);
+        }
+    }
 }

@@ -22,6 +22,9 @@ public class Buff : MonoBehaviour
     private bool isOnEnhanceCoolTime = false;
     #endregion
 
+    //private float increaseReactGaugeValue = 20; //호응 게이지 상승량
+    //private float decreaseReactGaugeValue = 10; //호응 게이지 상승량
+
     public float noteGenerateSpan = 8f;   //노트 생성 주기
     private float noteGenerateTimer = 0f; // 노트 생성 타이머
 
@@ -30,6 +33,7 @@ public class Buff : MonoBehaviour
 
     public float default_HealValue = 1;  //기본 힐량. 특성에 의해 변동 가능성을 고려하여 퍼블릭으로 설정.
     public float enhanced_HealValue = 4; //강화 힐량. 실제로는 기본힐량 + 강화힐량으로 사용된다.
+
 
     private bool isEnhanced = false;
 
@@ -135,6 +139,11 @@ public class Buff : MonoBehaviour
                     break;
             }
 
+            //for (int i = 0; i < farmersInBuffZone.Count; i++)
+            //{
+            //    farmersInBuffZone[i].GetComponent<FarmerController>().reactGauge += increaseReactGaugeValue;
+            //}
+
             buffTimer = 0;
         }
     }
@@ -144,25 +153,23 @@ public class Buff : MonoBehaviour
     private void HealBuff()
     {
 
-        if (farmersInBuffZone == null) //범위안에 농부가 없으면 리턴.
-            return;
+        if (farmersInBuffZone == null) return; //범위안에 농부가 없으면 리턴.
 
-
-        if(!isEnhanced)//강화 상태가 아니라면
+        if (!isEnhanced)//강화 상태가 아니라면
             for (int i = 0; i < farmersInBuffZone.Count; i++)
-            {
-                farmersInBuffZone[i].GetComponent<FarmerController>().stamina += default_HealValue; //범위안의 농부들에게 기본힐량만큼 스태미나 회복.
+            {              
+                farmersInBuffZone[i].GetComponent<FarmerController>().Healed(default_HealValue);
+                //범위안의 농부들에게 기본힐량만큼 스태미나 회복.
             }
 
-        else //강화상태라면
+        else           //강화상태라면
             for (int i = 0; i < farmersInBuffZone.Count; i++)
             {
-                farmersInBuffZone[i].GetComponent<FarmerController>().stamina
-                    += (default_HealValue + enhanced_HealValue); //범위안의 농부들에게 기본힐량 + 강화힐량만큼 회복
+                farmersInBuffZone[i].GetComponent<FarmerController>().Healed(default_HealValue, enhanced_HealValue);
+                //범위안의 농부들에게 기본힐량 + 강화힐량만큼 회복
             }
-
-
     }
+
     #endregion
 
 

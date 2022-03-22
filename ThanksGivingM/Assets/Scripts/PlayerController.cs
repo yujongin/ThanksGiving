@@ -8,13 +8,19 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     Vector2 moveVec;
+    private Animator player_Animator;
+
+    private void Start()
+    {
+        player_Animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
-        float x = joystick.Horizontal;
-        float y = joystick.Vertical;
+        float moveX = joystick.Horizontal;
+        float moveY = joystick.Vertical;
 
-        moveVec = new Vector2(x, y);
+        moveVec = new Vector2(moveX, moveY);
 
         #region 이동 제한
 
@@ -26,6 +32,25 @@ public class PlayerController : MonoBehaviour
 
 
         transform.Translate(moveVec * Time.deltaTime * moveSpeed);
+
+        if(moveX != 0 || moveY != 0) //움직이고 있으면
+        {
+            player_Animator.SetBool("isWalk", true);
+
+            if(moveX < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+            else
+                transform.localScale = new Vector3(1, 1, 1);
+
+
+        }
+
+
+        else
+            player_Animator.SetBool("isWalk", false);
+
+
+
 
     }
 

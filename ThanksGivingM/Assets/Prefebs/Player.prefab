@@ -27,10 +27,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.53, y: -0.32, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children:
-  - {fileID: 5090864101721913115}
+  m_Children: []
   m_Father: {fileID: 5090864102142903870}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5090864101596657799
 SpriteRenderer:
@@ -111,10 +110,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5090864101721913114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.06, y: -0.36, z: 10}
-  m_LocalScale: {x: 2, y: 1, z: 1.4}
+  m_LocalPosition: {x: 0, y: -0.5, z: 4}
+  m_LocalScale: {x: 1, y: 0.5, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 5090864101596657798}
+  m_Father: {fileID: 5090864102142903870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5090864101721913108
@@ -285,11 +284,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5090864101721913114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3401127bd0366ea4080977f9d4b827de, type: 3}
+  m_Script: {fileID: 11500000, guid: b1c57963ec357fe48863eb3a4b1366ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bufftype: 0
   farmersInBuffZone: []
+  enhanceDuration: 3
+  noteGenerateSpan: 8
+  default_HealValue: 1
+  enhanced_HealValue: 4
+  maxnotes: 5
+  notes: 0
 --- !u!50 &5090864101721913111
 Rigidbody2D:
   serializedVersion: 4
@@ -341,6 +346,7 @@ Transform:
   m_LocalPosition: {x: -1.4, y: 2.6217797, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5090864101721913115}
   - {fileID: 5090864101596657798}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -405,11 +411,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5090864102142903868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 595d0688707e3b3469c62c2cacba23d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ce10009863ad9341921c33ffcad1c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 0
 --- !u!95 &5090864102142903864
 Animator:
   serializedVersion: 3

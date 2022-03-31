@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     
     public FieldMaker FM;
 
+    public GameObject augSelect;
     public GameObject camera1;
     public Vector3 targetPos;
 
@@ -108,5 +109,17 @@ public class GameManager : MonoBehaviour
         SetRequiredEXP();
         UIManager.instance.UpdatePlayerLevel();
         UIManager.instance.UpdateExpGauge();
+        ActiveAugSelect();
+    }
+
+    private void ActiveAugSelect()
+    {
+        Time.timeScale = 0;
+        augSelect.SetActive(true);
+    }
+    public void SelectAugDone()
+    {
+        Time.timeScale = 1;
+        augSelect.SetActive(false);
     }
 }

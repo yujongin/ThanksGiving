@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8624864211172260182}
   - component: {fileID: 8624864211172260180}
   - component: {fileID: 8624864211172260181}
+  - component: {fileID: 5167352552323478754}
   - component: {fileID: 8624864211172260179}
   - component: {fileID: 4715033900451381273}
   m_Layer: 0
@@ -97,19 +98,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888fbfc64b22edf49a66b99e89020909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  farmer_Name: Patrick
-  family: 
-  level: 1
-  faverite_Type: 
-  full_stamina: 60
-  stamina: 60
-  harvest_Speed: 0.8
-  atk: 6
   x: 0
   cropNum: 0
   restTime: 5
   harvestCanvas: {fileID: 846955575148429608, guid: 2bd0f5418dfdcee42908d3d54c156098, type: 3}
   harvestText: {fileID: 0}
+--- !u!114 &5167352552323478754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8624864211172260183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8658fbf2119e2d842b7d91f7bff2550f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healedFX: {fileID: 0}
+  reactFX: {fileID: 0}
+  farmer_Name: 
+  family: 
+  level: 0
+  faverite_Type: 
+  full_stamina: 0
+  stamina: 0
+  harvest_Speed: 0
+  atk: 0
+  heal_To_exp_weight: 0.5
+  reactGauge: 0
+  value: 0
 --- !u!95 &8624864211172260179
 Animator:
   serializedVersion: 3

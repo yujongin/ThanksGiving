@@ -5,28 +5,7 @@ using UnityEngine.UI;
 
 public class FarmerController : MonoBehaviour
 {
-    public string farmer_Name;      //농부 이름
-    public string family;           //농부 소속 패밀리
-    public int level;               //농부 레벨   
-    public string faverite_Type;    //농부 선호 작물 타입;
-    public float full_stamina;      //농부 최대 체력
-    public float stamina;           //농부 현재 체력
-    public float harvest_Speed;     //수확 속도
-    public float atk;               //농부 공격력
-    public float heal_To_exp_weight = 0.5f; //힐량을 경험치로 바꾸는 것에 대한 가중치.
-
-    #region 호응관련 변수들
-    public float reactGauge; //호응 게이지
-    public const float MAXREACTGAUGE = 100; //최대 호응 게이지
-    private float reactDuration = 3; //호응 게이지 지속시간
-    private float reactTimer = 0f;
-    private float reactSpan = 1f;
-    private float increaseReactGaugeValue = 20; //호응 게이지 상승량
-    private float decreaseReactGaugeValue = 10; //호응 게이지 하락량
-    #endregion
-
-    private bool isInBuffZone; //버프 존 안에 들어와있는가?
-
+    private FarmerCondition farmerCondition;
 
     private Field field;            //밭 정보
     private GameObject target_Crop; // 현재 목표 작물
@@ -52,14 +31,14 @@ public class FarmerController : MonoBehaviour
     private float frontRest;
     private float span;
 
-    public GameObject healedFX;
-    public GameObject reactFX;
+
 
     public GameObject harvestCanvas;
     public Text harvestText;
     // Start is called before the first frame update
     void Start()
     {
+        farmerCondition = GetComponent<FarmerCondition>();
         field = GameObject.Find("Field").GetComponent<Field>();
         animator = gameObject.GetComponent<Animator>();
 
@@ -78,10 +57,9 @@ public class FarmerController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.R)) //테스트를 위한 메소드. 누르면 탈진한다.
         {
-            stamina = 0;
+            farmerCondition.stamina = 0;
         }
 
-        ReactTimer(); //호응 관련 메소드
     
 
             //만약 목표 작물이 없으면 받아온다.
@@ -110,8 +88,8 @@ public class FarmerController : MonoBehaviour
             if (span > 1f)
             {
                 span = 0;
-                if(target_Crop)
-                    stamina -= target_Crop.GetComponent<Crop>().har;
+                if (target_Crop)
+                    farmerCondition.DecreaseStamina(target_Crop.GetComponent<Crop>().har);                 
             }
 
         }
@@ -124,11 +102,11 @@ public class FarmerController : MonoBehaviour
             if (RT > 1)
             {
                 RT = 0;
-                stamina += full_stamina * 0.1f;
+                farmerCondition.IncreaseStamina(farmerCondition.full_stamina * 0.1f);              
             }
-            if (stamina >= full_stamina)
+            if (farmerCondition.stamina >= farmerCondition.full_stamina)
             {
-                stamina = full_stamina;
+                farmerCondition.stamina = farmerCondition.full_stamina;
                 isRest = false;
             }
         }
@@ -141,13 +119,13 @@ public class FarmerController : MonoBehaviour
             span = span += Time.deltaTime;
             if (span > frontRest)
             {
-                if (stamina < full_stamina)
+                if (farmerCondition.stamina < farmerCondition.full_stamina)
                 {
-                    stamina += full_stamina * 0.1f;
+                    farmerCondition.IncreaseStamina(farmerCondition.full_stamina * 0.1f);
                 }
-                if (stamina > full_stamina)
+                if (farmerCondition.stamina > farmerCondition.full_stamina)
                 {
-                    stamina = full_stamina;
+                    farmerCondition.stamina = farmerCondition.full_stamina;
                 }
                 span = 0;
             }
@@ -156,29 +134,7 @@ public class FarmerController : MonoBehaviour
 
     }
 
-    private void ReactTimer()
-    {
-        reactTimer += Time.deltaTime;
-        if (reactTimer > reactSpan) // 호응 타이머를 잰다.
-        {
-            if (isInBuffZone)
-                reactGauge += increaseReactGaugeValue; //1초가 되었을 때 버프존에 있다면 증가.
-            else
-                reactGauge -= decreaseReactGaugeValue; //아니라면 감소.
-
-            reactTimer = 0;
-
-            if (reactGauge > MAXREACTGAUGE) //호응 게이지가 꽉 차면
-            {
-                atk += (GameManager.Instance.player_Level * 2);
-                Debug.Log("호응!");
-                reactFX.SetActive(true);
-                StartCoroutine(RewindReactBuff(GameManager.Instance.player_Level * 2));
-                GameManager.Instance.GainEXP(GameManager.Instance.requiredexp * 0.05f); //필요 경험치의 5퍼센트 획득
-                reactGauge = 0;
-            }
-        }
-    }
+   
     //목표 작물 받아오기 메서드
     private void GetCrop()
     {
@@ -221,12 +177,12 @@ public class FarmerController : MonoBehaviour
     {
         delta += Time.deltaTime;
         //공격속도에 따라서
-        if (delta * harvest_Speed > 1) 
+        if (delta * farmerCondition.harvest_Speed > 1) 
         {
             //작물의 체력을 깎는다.
             animator.SetTrigger("Harvest");
             cropAnimator.SetTrigger("Harvesting");
-            crop.hp -= atk;
+            crop.hp -= farmerCondition.atk;
             delta = 0;
         }
         Rest();
@@ -263,13 +219,6 @@ public class FarmerController : MonoBehaviour
     private bool complete;
 
    
-    IEnumerator RewindReactBuff(float increaseATK)
-    {
-        yield return new WaitForSeconds(reactDuration);
-
-        atk -= increaseATK;
-
-    }
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(0.5f);
@@ -277,7 +226,7 @@ public class FarmerController : MonoBehaviour
     }
     private void Rest()
     {
-        if (stamina<=0)
+        if (farmerCondition.stamina <=0)
         {
             isRest = true;          
             GameManager.Instance.tension -= 10;
@@ -304,35 +253,7 @@ public class FarmerController : MonoBehaviour
     }
 
 
-    public float value;
-    public void Healed(params float [] values)
-    {        
-        for(int i = 0; i < values.Length; i++)
-        {
-            value += values[i];
-        }
+    
 
-        stamina += value; //스태미나 회복
-        GameManager.Instance.GainEXP(value * heal_To_exp_weight); //힐량에 가중치 만큼 곱해서 경험치로 환산 후 게임매니저에게 넘겨줌.
-
-        value = 0; //변수 초기화
-
-        healedFX.SetActive(true);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "BuffZone")
-        {
-            isInBuffZone = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "BuffZone")
-        {
-            isInBuffZone = false;
-        }
-    }
 
 }
